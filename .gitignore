@@ -1,0 +1,6 @@
+venv
+node_modules
+migrations
+static
+*.pyc
+*.orig
