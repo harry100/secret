@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { Banner } from './Components/Banner'
+
+
 class App extends Component{
    render(){
       return(
          <div>
-            <h1>Hello World</h1>
+            <Banner />
          </div>
       );
    }
