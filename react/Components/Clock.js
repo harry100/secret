@@ -21,16 +21,17 @@ export class ClockFunction extends React.Component {
     }
 
     render() {
-        let { time } = this.state; // retrieve the time from state
-        let hours = time.getHours().toString();
-        let minutes = time.getMinutes().toString();
+      let { time } = this.state; // retrieve the time from state
+      let hours = time.getHours().toString();
+      let minutes = time.getMinutes().toString();
+      if (minutes<10){minutes = '0' + minutes}
 
-        return (
-          <React.Fragment>
-            {/* print the string prettily */}
-            {/*time.toLocaleTimeString()*/}
-            {hours} : {minutes}
-          </React.Fragment>
-        );
+      return (
+        <React.Fragment>
+          {/* print the string prettily */}
+          {/*time.toLocaleTimeString()*/}
+          {hours} : {minutes} 
+        </React.Fragment>
+      );
     }
 }
