@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Banner } from './Components/Banner'
+import {ParticipantInput} from './Components/ParticipantInput'
 
 
 class App extends Component{
@@ -7,6 +8,7 @@ class App extends Component{
       return(
          <div>
             <Banner />
+            <ParticipantInput />
          </div>
       );
    }
