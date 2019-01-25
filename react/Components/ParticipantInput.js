@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import {Person} from './Person';
 
 
 export class ParticipantInput extends React.Component {
@@ -28,7 +31,15 @@ export class ParticipantInput extends React.Component {
                placeholder="Enter the number of participants"/>
             </div>
             <div className="col col-lg-2">
-              <input type="submit" className="btn btn-light" value="Submit"/>
+            <Router>
+              <div>
+                <Link to="/people/">
+                  <input type="submit" className="btn btn-light" value="Submit"/>
+                </Link>
+
+                <Route path="/people/" exact component={Person}/>
+              </div>
+            </Router>
             </div>
           </div>
         </div>
